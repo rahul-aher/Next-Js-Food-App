@@ -14,7 +14,7 @@ const RestaurantSignUp = () => {
         console.log(email,password,c_password,restoname,city,address,contact); 
         let result = await fetch("http://localhost:3000/api/restaurant",{
             method:"POST",
-            body:JSON.stringify({email,password,name,city,address,contact})
+            body:JSON.stringify({email,password,restoname,city,address,contact})
         });
         result= await result.json();
         console.log(result);
